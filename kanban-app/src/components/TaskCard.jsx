@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css'; 
 
-// Ícones simples
 const UserIcon = () => <span style={{marginRight: '5px'}}>👤</span>;
 const DateIcon = () => <span style={{marginRight: '5px'}}>📅</span>;
 
@@ -10,7 +9,7 @@ function TaskCard({ task, deleteTask }) {
   const { title, description, responsible, deadline } = task;
   const statusClass = task.status.toLowerCase().replace(' ', '-');
 
-  // Lógica de exclusão (NOVO)
+  // Exclusão
   const handleDelete = () => {
       if(window.confirm(`Tem certeza que deseja excluir a tarefa: "${title}"?`)){
           deleteTask(task.id);
@@ -21,7 +20,7 @@ function TaskCard({ task, deleteTask }) {
     <div className={`task-card card-${statusClass}`}>
       <div className="task-header">
         <h3 className="task-title">{title}</h3>
-        {/* Botão de Excluir */}
+        {/* Botão de excluir */}
         <button onClick={handleDelete} className="delete-btn">
             🗑️
         </button>
