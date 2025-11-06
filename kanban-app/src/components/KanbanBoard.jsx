@@ -14,7 +14,7 @@ function KanbanBoard({ tasks, addTask, deleteTask }) {
           title={status}
           tasks={tasks.filter(task => task.status === status)}
           addTask={addTask} 
-          deleteTask={deleteTask} // <--- PASSANDO PARA O COLUMN
+          deleteTask={deleteTask} 
         />
       ))}
     </div>
