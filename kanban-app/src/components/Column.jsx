@@ -27,7 +27,7 @@ function Column({ title, tasks, addTask, deleteTask }) {
           <TaskCard 
             key={task.id} 
             task={task} 
-            deleteTask={deleteTask} // <--- PASSANDO PARA O TASKCARD
+            deleteTask={deleteTask} 
           />
         ))}
       </div>
