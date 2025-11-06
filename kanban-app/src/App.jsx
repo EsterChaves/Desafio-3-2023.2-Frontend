@@ -5,7 +5,7 @@ import KanbanBoard from './components/KanbanBoard';
 function App() {
   const [tasks, setTasks] = useState([]); 
 
-  // Função para adicionar uma nova tarefa à lista
+  // Adicionar nova tarefa à lista
   const addTask = (newTaskData) => {
     const newTask = {
       id: Date.now(), 
@@ -19,7 +19,7 @@ function App() {
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 
-  // Função para DELETAR uma tarefa com base no ID (NOVO)
+  // DELETAR uma tarefa 
   const deleteTask = (taskId) => {
     setTasks(prevTasks => prevTasks.filter(task => task.id !== taskId));
   };
@@ -29,7 +29,7 @@ function App() {
       <KanbanBoard 
         tasks={tasks} 
         addTask={addTask} 
-        deleteTask={deleteTask} // <--- PASSANDO A FUNÇÃO DE EXCLUIR
+        deleteTask={deleteTask} 
       />
     </div>
   );
